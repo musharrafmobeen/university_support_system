@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <com.google.android.material.card.MaterialCardView
+       android:focusable="true"
+       android:checkable="true"
+       android:layout_height="wrap_content"
+     app:cardCornerRadius="40dp"
+         android:layout_marginTop="60dp"
+       android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:layout_marginBottom="10dp"
+       app:cardElevation="40dp"
+       android:layout_width="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="586dp"
+          android:background="@drawable/backgroundimg9">
+
+          <io.alterac.blurkit.BlurLayout
+              android:id="@+id/bonafideCertificateBlurLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:blk_blurRadius="12"
+              app:blk_downscaleFactor="0.12"
+              app:blk_fps="0"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/regBCDocumentRequest"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regBCDocumentRequestEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reg #"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/facultyBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/regBCDocumentRequest"
+            android:layout_height="wrap_content"
+            android:hint="Faculty">
+
+            <AutoCompleteTextView
+                android:id="@+id/facultyBCDocumentRequestMenuAutocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/studentCourseBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/facultyBCDocumentRequest"
+            android:layout_height="wrap_content"
+            android:hint="Course">
+
+            <AutoCompleteTextView
+                android:id="@+id/studentCourseBCDocumentRequestMenuAutocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/batchBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/regBCDocumentRequest"
+            android:layout_height="wrap_content"
+            android:hint="Batch">
+
+            <AutoCompleteTextView
+                android:id="@+id/studentBatchBCDocumentRequestMenuAutocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatherNameBCDocumentRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/batchBCDocumentRequest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fatherNameBCDocumentRequestNameEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Father Name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passportNoBCDocumentRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/fatherNameBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passportNoBCDocumentRequestNameEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Passport Number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--simple text view to show the selected date by the user-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_picker_actions_BC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/passportNoBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/date_picker_actions_BCEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date Of Joining"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nationalityBCDocumentRequest"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/date_picker_actions_BC"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nationalityBCDocumentRequestNameEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nationality"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/currentSemesterBCDocumentRequest"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/nationalityBCDocumentRequest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/currentSemesterBCDocumentRequesttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Current Semester"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/departmentBCDocumentRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/currentSemesterBCDocumentRequest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/departmentBCDocumentRequesttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Department"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BCDocumentRequestBtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departmentBCDocumentRequest"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Request"
+            />
+      </RelativeLayout>
+ </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>

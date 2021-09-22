@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminOptionsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <RelativeLayout
+            android:background="@drawable/backgroundimg9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/optionImageCardView"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardCornerRadius="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/optionImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    tools:background="@tools:sample/backgrounds/scenic"
+                    />
+        </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/optionNameTextView"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/optionImageCardView"
+                android:layout_toLeftOf="@+id/optionsLogoutBtn"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/optionsLogoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="LogOut"
+                style="?attr/materialButtonOutlinedStyle"
+                app:icon="@drawable/ic_baseline_exit_to_app_24"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/seeAnnouncementsFragmentLinkButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/optionsAnnouncementBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/studentVerificationImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/annocunement" />
+
+            <TextView
+                android:layout_width="159dp"
+                android:layout_height="61dp"
+                android:layout_below="@+id/studentVerificationImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="See Announcements"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SeeGrievanceFragmentLinkButton"
+        android:layout_toRightOf="@+id/seeAnnouncementsFragmentLinkButton"
+        android:clickable="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/optionsGrievancesBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/employeeVerificationImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/grevance"  />
+
+            <TextView
+                android:id="@+id/optionGrievanceTextView"
+                android:layout_width="148dp"
+                android:layout_height="41dp"
+                android:layout_below="@+id/employeeVerificationImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="See your grievances"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appointmentFragmentLinkButton"
+        android:layout_below="@+id/seeAnnouncementsFragmentLinkButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/optionsAppointmentBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/grievanceRequestsButtonImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/appointment" />
+
+            <TextView
+                android:id="@+id/optionName2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/grievanceRequestsButtonImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Request Appointments"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/documentRequestLinkButton"
+        android:layout_below="@+id/SeeGrievanceFragmentLinkButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/appointmentFragmentLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/optionsDocumentBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+            <ImageView
+                android:id="@+id/staffCreationButtonImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/document" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="38dp"
+                android:layout_below="@+id/staffCreationButtonImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Request Documents"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

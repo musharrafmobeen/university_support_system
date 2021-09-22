@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:id="@+id/carView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardView:cardCornerRadius="8dp"
+    cardView:cardElevation="8dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroundimg9">
+
+        cardView:layout_constraintLeft_toRightOf="@id/image"
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/appointmentRecyclerViewBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cardView:blk_blurRadius="12"
+            cardView:blk_downscaleFactor="0.12"
+            cardView:blk_fps="0" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            cardView:cardCornerRadius="90dp"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+
+            cardView:layout_constraintEnd_toStartOf="@+id/chip4"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                tools:background="@tools:sample/backgrounds/scenic" />
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name :"
+            cardView:chipSurfaceColor="#F63690"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintHorizontal_bias="0.358"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/studentNameForAppointment"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="92dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#BA1AA0"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintRight_toRightOf="parent"
+            cardView:layout_constraintStart_toEndOf="@+id/chip4"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintVertical_bias="0.0"
+            tools:text="@tools:sample/full_names" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description :"
+            cardView:chipSurfaceColor="#F63690"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintHorizontal_bias="0.336"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@+id/chip4"
+            cardView:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/appointmentDescriptionStaff"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginRight="268dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:text="announcement"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#BA1AA0"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintRight_toRightOf="parent"
+            cardView:layout_constraintStart_toEndOf="@+id/chip5"
+            cardView:layout_constraintTop_toBottomOf="@+id/studentNameForAppointment"
+            cardView:layout_constraintVertical_bias="0.8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

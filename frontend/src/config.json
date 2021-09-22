@@ -1,0 +1,30 @@
+{
+    "url": {
+        "baseUrl": "http://localhost:5000",
+        "getAuthUrl": "/users/login",
+        "getMeUrl": "/users/getUser",
+        "getCurrentUserUrl": "/users/me",
+        "getStudentsUrl": "/students",
+        "getUnApprovedStudents": "/unapprovedStudents",
+        "getRejectedStudents": "/rejectedStudents",
+        "getEmployeesUrl": "/employees",
+        "getUnApprovedEmployeesUrl": "/unapprovedEmployees",
+        "getRejectedEmployeesUrl": "/rejectedEmployees",
+        "getCategoriesUrl": "/category",
+        "getGrievancesUrl": "/grievances",
+        "getStaffURL": "/staffs",
+        "getAppointmentsRequestsURL": "/appointments",
+        "getTimeTableURL": "/timetables",
+        "getDocumentRequestsURL": "/documentrequests",
+        "getChatsUrl": "/messages",
+        "getAnnouncementsUrl": "/announcements",
+        "getAdminUrl": "/admin",
+        "getStaffRatingsUrl": "/staffratings"
+    },
+    "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Credentials": "true"
+    }
+}

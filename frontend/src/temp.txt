@@ -1,0 +1,57 @@
+ <Paper className={classes.paper} elevation={0}>
+                {isLoggedIn && redirectUser()}
+                <form className={classes.form}
+                    onSubmit={
+                        HandleFormSubmitt
+                    }
+                >
+                    <Typography
+                        className={classes.formTitle}
+                        variant="h4"
+                    >Login</Typography>
+                    <FormControl margin='normal' fullWidth required variant="outlined">
+                        {/* <InputLabel htmlFor="phone" id="phn">{strings.phoneNumber}</InputLabel> */}
+                        <TextField
+                            variant="outlined"
+                            id="mail"
+                            type='text'
+                            value={emailValue}
+                            onChange={handleEmailChange}
+                            label="Email"
+                            error={isError}
+                            helperText={errorMsg}
+                        />
+                    </FormControl>
+                    <FormControl margin='normal' required fullWidth variant="outlined">
+                        <InputLabel htmlFor='password'>Password</InputLabel>
+                        <OutlinedInput
+                            id="password"
+                            type={shownPass ? 'text' : 'password'}
+                            value={passValue}
+                            onChange={handlePassChange}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={togglePass}
+                                        onMouseDown={handleMouseDownPassword}
+                                        edge="end"
+                                    >
+                                        {shownPass ? <Visibility /> : <VisibilityOff />}
+                                    </IconButton>
+                                </InputAdornment>
+                            }
+                            labelWidth={80}
+                        />
+                    </FormControl>
+                    <div className={classes.fromBottomWraper}>
+                        <Button
+                            variant='contained'
+                            type='submit'
+                            className={classes.submit}
+                        >
+                            Continue
+                        </Button>
+                    </div>
+                </form>
+            </Paper>

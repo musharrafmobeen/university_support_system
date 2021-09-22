@@ -1,0 +1,208 @@
+/* #slideset3 {
+    height: 10em;
+    position: relative;
+    overflow: hidden
+} */
+
+.parent {
+    width: 98%;
+    text-align: center;
+    /* margin-top: 2%; */
+    /* margin: 1%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    border-bottom: 0.25px solid #788497;
+    margin-bottom: 0.5%;
+    color: #788497;
+}
+
+.heading>* {
+    margin-left: 0.75%;
+    margin-right: 0.75%;
+}
+
+.headingText {
+    font-weight: bolder;
+}
+
+
+/* #slideset3>* {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #006838;
+    font-weight: bolder;
+}
+
+.date {
+    font-weight: normal;
+    color: #788497;
+}
+
+#slideset3>*:first-child {
+    animation: 12s autoplay3 infinite ease-in-out;
+
+
+}
+
+#slideset3>*:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+@keyframes autoplay3 {
+    0% {
+        margin-top: 10em
+    }
+
+    4% {
+        margin-top: 0em
+    }
+
+    31% {
+        margin-top: 0em
+    }
+
+    35% {
+        margin-top: -10em
+    }
+
+    64% {
+        margin-top: -10em
+    }
+
+    68% {
+        margin-top: -20em
+    }
+
+    96% {
+        margin-top: -20em
+    }
+
+    100% {
+        margin-top: -30em
+    }
+} */
+
+
+/*/trial */
+
+
+/* .marquee {
+    /* width: 450px; */
+/* margin: 0 auto; */
+/* white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+} */
+
+/* .marquee div {
+    /* display: inline-block; */
+/* padding-top: 20%; */
+/* transform: translateY(0); */
+/* will-change: transform; */
+/* show the marquee just outside the paragraph */
+/* animation: marquee 15s linear infinite; */
+/* } */
+
+/* .marquee div:hover {
+    animation-play-state: paused
+} */
+
+
+/* Make it move */
+
+/* @keyframes marquee {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* Respect user preferences about animations */
+
+/* @media (prefers-reduced-motion: reduce) {
+    .marquee {
+        white-space: normal
+    }
+
+    .marquee div {
+        animation: none;
+        padding-top: 0;
+    }
+} */
+
+
+
+.example3 {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.example3 div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    /* Apply animation to this element */
+    -moz-animation: example3 15s linear infinite;
+    -webkit-animation: example3 15s linear infinite;
+    animation: example3 15s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes example3 {
+    0% {
+        -moz-transform: translateY(-100%);
+    }
+
+    100% {
+        -moz-transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes example3 {
+    0% {
+        -webkit-transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+    }
+}
+
+@keyframes example3 {
+    0% {
+        -moz-transform: translateY(-100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateY(-100%);
+        /* Firefox bug fix */
+        transform: translateY(-100%);
+    }
+
+    100% {
+        -moz-transform: translateY(100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateY(100%);
+        /* Firefox bug fix */
+        transform: translateY(100%);
+    }
+}

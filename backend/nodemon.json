@@ -1,0 +1,10 @@
+{
+    "env":{
+        "JWT_EMPLOYEE_KEY": "secretemployeekey",
+        "JWT_STAFF_KEY": "secretstaffkey",
+        "JWT_STUDENT_KEY":"secretstkey",
+        "Mongo_db_Atlas_PW":"Blackviking125",
+        "JWT_KEY": "secretkey",
+        "JWT_ADMIN_KEY": "secretAdminkey"
+    }
+}

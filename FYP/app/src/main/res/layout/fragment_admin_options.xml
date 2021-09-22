@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg9"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminOptionsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundimg9">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/adminImageCardView"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/adminImage"
+                tools:background="@tools:sample/backgrounds/scenic"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/adminNameTextView"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="72dp"
+                android:layout_marginLeft="137dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/adminLogoutBtn"
+                android:layout_toEndOf="@+id/adminImageCardView"
+                android:layout_toRightOf="@+id/adminImageCardView"
+                android:textColor="#CD339B"
+                android:textSize="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/adminLogoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="LogOut"
+                app:icon="@drawable/ic_baseline_exit_to_app_24"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/studentAccountVericationRequestsButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/adminStudentVerificationblurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/studentVerificationImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/verification" />
+
+            <TextView
+                android:layout_width="159dp"
+                android:layout_height="61dp"
+                android:layout_below="@+id/studentVerificationImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Students Verification Requests"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/employeeAccountVericationRequestsButton"
+        android:layout_toRightOf="@+id/studentAccountVericationRequestsButton"
+        android:clickable="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/adminEmployeeVerificationblurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/employeeVerificationImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/verification" />
+
+            <TextView
+                android:layout_width="148dp"
+                android:layout_height="41dp"
+                android:layout_below="@+id/employeeVerificationImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Employee Verification Request"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/grievanceRequestsButton"
+        android:layout_below="@+id/studentAccountVericationRequestsButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/adminGrievanceblurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+
+            <ImageView
+                android:id="@+id/grievanceRequestsButtonImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/grievances" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/grievanceRequestsButtonImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="All Lodged Grievances"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/staffCreationButton"
+        android:layout_below="@+id/employeeAccountVericationRequestsButton"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/grievanceRequestsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="155dp"
+            android:background="@drawable/backgroundimg9">
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/adminStaffCreationblurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_blurRadius="12"
+                app:blk_downscaleFactor="0.12"
+                app:blk_fps="0"/>
+            <ImageView
+                android:id="@+id/staffCreationButtonImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/create" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="38dp"
+                android:layout_below="@+id/staffCreationButtonImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Create New Staff"
+                android:textColor="#CD339B"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

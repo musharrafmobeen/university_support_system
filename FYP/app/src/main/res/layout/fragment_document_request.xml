@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <com.google.android.material.card.MaterialCardView
+       android:focusable="true"
+       android:checkable="true"
+       android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp"
+         android:layout_marginTop="60dp"
+       android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+       app:cardElevation="40dp"
+       android:layout_width="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="586dp"
+          android:background="@drawable/backgroundimg9">
+
+          <io.alterac.blurkit.BlurLayout
+              android:id="@+id/referenceblurLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:blk_blurRadius="12"
+              app:blk_downscaleFactor="0.12"
+              app:blk_fps="0"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/regDocumentRequest"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="5dp"
+          android:layout_marginBottom="10dp"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:hint="">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/regDocumentRequestEditText"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="Reg #"
+             android:textColor="@color/black"
+             android:textColorHint="@color/black" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/facultyDocumentRequest"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="100dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginRight="5dp"
+          android:layout_toRightOf="@+id/regDocumentRequest"
+          android:layout_height="wrap_content"
+          >
+
+         <AutoCompleteTextView
+             android:hint="Faculty"
+             android:id="@+id/facultyDocumentRequestMenuAutocomplete"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/studentCourseDocumentRequest"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="100dp"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@+id/facultyDocumentRequest"
+          android:layout_height="wrap_content"
+          android:hint="Course">
+
+         <AutoCompleteTextView
+             android:id="@+id/studentCourseDocumentRequestMenuAutocomplete"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/batchDocumentRequest"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_marginBottom="10dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_below="@+id/regDocumentRequest"
+          android:layout_height="wrap_content"
+          android:hint="Batch">
+
+         <AutoCompleteTextView
+             android:id="@+id/studentBatchDocumentRequestMenuAutocomplete"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/staffDocumentRequest"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/batchDocumentRequest"
+          android:hint="Staffs">
+
+         <AutoCompleteTextView
+             android:id="@+id/staffDocumentRequestMenuAutocomplete"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/desiredInstituteName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_below="@+id/staffDocumentRequest"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:hint="">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/desiredInstituteNameEdittext"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:hint="Desired Institute Name"
+             android:textColor="@color/black"
+             android:textColorHint="@color/black" />
+      </com.google.android.material.textfield.TextInputLayout>
+      <!--simple text view to show the selected date by the user-->
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/date_picker_actions"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_below="@+id/desiredInstituteName"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:hint="">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/date_picker_actionsEdittext"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:hint="Date Of Joining"
+             android:textColor="@color/black"
+             android:textColorHint="@color/black" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/currentSemesterDocumentRequest"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_below="@+id/date_picker_actions"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:hint="">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/currentSemesterDocumentRequesttext"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:hint="Current Semester"
+             android:textColor="@color/black"
+             android:textColorHint="@color/black" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/departmentDocumentRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/currentSemesterDocumentRequest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/departmentDocumentRequesttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Department"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/DocumentRequestBtn"
+          style="?attr/materialButtonOutlinedStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/departmentDocumentRequest"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="20dp"
+          android:layout_marginBottom="20dp"
+          android:gravity="center"
+          android:text="Request"
+          />
+      </RelativeLayout>
+ </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
